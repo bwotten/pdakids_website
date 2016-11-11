@@ -44,21 +44,30 @@ function loadPage(url)
 	url=url.replace('#page','');
 	
 	$('#loading').css('visibility','visible');
-	
-	$.ajax({
-		type: "POST",
-		url: "load_page.php",
-		data: 'page='+url,
-		dataType: "html",
-		success: function(msg){
-			
-			if(parseInt(msg)!=0)
-			{
-				$('#pageContent').html(msg);
-				$('#loading').css('visibility','hidden');
-			}
-		}
-		
-	});
+
+	$.ajax({ url: 'please.php',
+ 			data: 'I should be able to put a dummy string here',
+ 			dataType: 'text',
+ 			type: 'post',
+ 			success: function(output) {
+              alert(output);
+              $('#loading').css('visibility','hidden');
+          }
+ 	});
+	//$.ajax({
+	//	type: "POST",
+	//	url: "load_page.php",
+	//	data: 'page='+url,
+	//	dataType: "html",
+	//	success: function(msg){
+	//		alert('the server returned ' + msg);
+	//		if(parseInt(msg)!=0)
+	//		{
+	//			$('#pageContent').html(msg);
+	//			$('#loading').css('visibility','hidden');
+	//		}
+	//	}
+	//	
+	//});
 
 }
