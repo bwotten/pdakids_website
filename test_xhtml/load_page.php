@@ -1,5 +1,7 @@
 <?php
 
+
+echo 'PHPISWORKING'
 if(!$_POST['page']) die("0");
 
 $page = (int)$_POST['page'];
