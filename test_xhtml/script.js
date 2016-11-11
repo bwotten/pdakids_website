@@ -1,50 +1,64 @@
-$(document).ready(function(){	//executed after the page has loaded
+var default_content="";
 
-	checkURL();	//check if the URL has a reference to a page and load it
+$(document).ready(function(){
+	
+	checkURL();
+	$('ul li a').click(function (e){
 
-	$('ul li a').click(function (e){	//traverse through all our navigation links..
-
-			checkURL(this.hash);	//.. and assign them a new onclick event, using their own hash as a parameter (#page1 for example)
+			checkURL(this.hash);
 
 	});
-
-	setInterval("checkURL()",250);	//check for a change in the URL every 250 ms to detect if the history buttons have been used
-
+	
+	//filling in the default content
+	default_content = $('#pageContent').html();
+	
+	
+	setInterval("checkURL()",250);
+	
 });
 
-var lasturl="";	//here we store the current URL hash
+var lasturl="";
 
 function checkURL(hash)
 {
-	if(!hash) hash=window.location.hash;	//if no parameter is provided, use the hash value from the current address
-
-	if(hash != lasturl)	// if the hash value has changed
+	if(!hash) hash=window.location.hash;
+	
+	if(hash != lasturl)
 	{
-		lasturl=hash;	//update the current hash
-		loadPage(hash);	// and load the new page
+		lasturl=hash;
+		
+		// FIX - if we've used the history buttons to return to the homepage,
+		// fill the pageContent with the default_content
+		
+		if(hash=="")
+		$('#pageContent').html(default_content);
+		
+		else
+		loadPage(hash);
 	}
 }
 
-function loadPage(url)	//the function that loads pages via AJAX
+
+function loadPage(url)
 {
-	url=url.replace('#page','');	//strip the #page part of the hash and leave only the page number
-
-	$('#loading').css('visibility','visible');	//show the rotating gif animation
-
-	$.ajax({	//create an ajax request to load_page.php
+	url=url.replace('#page','');
+	
+	$('#loading').css('visibility','visible');
+	
+	$.ajax({
 		type: "POST",
 		url: "load_page.php",
-		data: 'page='+url,	//with the page number as a parameter
-		dataType: "html",	//expect html to be returned
+		data: 'page='+url,
+		dataType: "html",
 		success: function(msg){
-
-			if(parseInt(msg)!=0)	//if no errors
+			
+			if(parseInt(msg)!=0)
 			{
-				$('#pageContent').html(msg);	//load the returned html into pageContet
-				$('#loading').css('visibility','hidden');	//and hide the rotating gif
+				$('#pageContent').html(msg);
+				$('#loading').css('visibility','hidden');
 			}
 		}
-
+		
 	});
 
 }
