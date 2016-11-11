@@ -54,7 +54,7 @@ function loadPage(url)
 			
 			if(parseInt(msg)!=0)
 			{
-				$('#pageContent').html(msg);
+				$('#pageContent').html("TheJavaScriptWorked");
 				$('#loading').css('visibility','hidden');
 			}
 		}
