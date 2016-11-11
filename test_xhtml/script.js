@@ -46,11 +46,12 @@ function loadPage(url)
 	$('#loading').css('visibility','visible');
 
 	$.ajax({ url: 'please.php',
- 			data: 'I should be able to put a dummy string here',
- 			dataType: 'text',
+ 			data: 'page='+url,
+ 			dataType: 'html',
  			type: 'post',
  			success: function(output) {
-              alert(output);
+ 			  //alert("worked");
+        	  $('#pageContent').html(output);
               $('#loading').css('visibility','hidden');
           }
  	});
