@@ -37,7 +37,7 @@
 		$pdf->Cell(50,10,$discovery,1,1);
 	
 		$filename='/var/www/html/pdakids/patientInfo/NewPatient.pdf';  //where pdf is stored on the web server
-		$pdf->Output($filename, 'F');                                  //saves pdf
+		$pdf->Output($filename, 'F');                              //saves pdf
 
 	}
 
