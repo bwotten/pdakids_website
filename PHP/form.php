@@ -1,7 +1,7 @@
 <?php
 
-	if(!empty($_POST['submit']))
-	{
+	//if(!empty($_POST['submit']))
+	//{
 		$clientName=$_POST['clientName'];           //HTML element references
 		$parentName=$_POST['parentName'];
 		$relationship=$_POST['relationship'];
@@ -16,30 +16,30 @@
 		$pdf->AddPage();
 		$pdf->SetFont("Arial", "B", 16);
 		$pdf->Cell(50,10,"Client Name:",1,0);
-		$pdf->Cell(50,10,$clientName,1,1);
+		$pdf->Cell(70,10,$clientName,1,1);
 
 		$pdf->Cell(50,10,"Parent Name:",1,0);
-		$pdf->Cell(50,10,$parentName,1,1);
+		$pdf->Cell(70,10,$parentName,1,1);
 
 		$pdf->Cell(50,10,"Relationship:",1,0);
-		$pdf->Cell(50,10,$relationship,1,1);
+		$pdf->Cell(70,10,$relationship,1,1);
 
 		$pdf->Cell(50,10,"Day Phone:",1,0);
-		$pdf->Cell(50,10,$dayPhone,1,1);
+		$pdf->Cell(70,10,$dayPhone,1,1);
 
 		$pdf->Cell(50,10,"Evening Phone:",1,0);
-		$pdf->Cell(50,10,$eveningPhone,1,1);
+		$pdf->Cell(70,10,$eveningPhone,1,1);
 	
 		$pdf->Cell(50,10,"Email:",1,0);
-		$pdf->Cell(50,10,$email,1,1);
+		$pdf->Cell(70,10,$email,1,1);
 	
 		$pdf->Cell(50,10,"Discovery:",1,0);
-		$pdf->Cell(50,10,$discovery,1,1);
+		$pdf->Cell(70,10,$discovery,1,1);
 	
 		$filename='/var/www/html/pdakids/patientInfo/NewPatient.pdf';  //where pdf is stored on the web server
 		$pdf->Output($filename, 'F');                                  //saves pdf
 
-	}
+	//}
 
 	require 'libs/PHPMailer/PHPMailerAutoload.php';
 
