@@ -1,41 +1,65 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>PDA Form</title>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
-    <!-- Bootstrap -->
-    <link href="/libs/Bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="KEYWORDS" content="mental health, Charlottesville, Virginia, children, families, poehailos, dupont, social worker, psychotherapy, group therapy, family therapy, business therapy, ADHD, autism">
+	<title>Poehailos, Dupont & Associates, PLC - Contact Us</title>
+	<link href="libs/Bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head>
-  <body>
-	<div class="container">
-		<div class="row">
-			<div class="col-xs-8 col-xs-push-2">
+</head>
 
-				<h1 style="margin-top:50px">Basic Form</h1>
+<body>
+<table border="1" bordercolor="#000000" cellspacing="0" cellpadding="0" width=100%>
+<tr>
+<td>
+<table border="0" cellspacing="0" cellpadding="12" width=100%>
+<tr>
+	<td width="680" valign="top" bgcolor="#666699" style="padding:12px">
+	<img src="css/images/logo_updated.gif" width="677" height="48" alt="Poehailos, Dupont and Associates | Charlottesville mental health" border="0">
+	<p class="titlebar" id="nav-bar-custom"><a class="nav-custom" href="index.html">Home</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a class="nav-custom" href="services.html">Services</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a class="nav-custom" href="about.html">Who We Are</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a class="nav-custom" href="info.html">Patient Registration</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a class="nav-custom" href="office.html">Office Information</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a class="nav-custom" href="resources.html">Resources</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a class="nav-custom" href="contactus.html"><strong>Contact Us</strong></a></p>
+	</td>
+	<td nowrap valign="top" align="left" bgcolor="#666699" style="padding:12px">
+	<p class="titlebar">
+	887 B Rio East Court<br>
+	Charlottesville, VA  22901<br>
+	<br>
+	Phone: (434) 220-4686<br>
+	Fax: (434) 220-4687</p>
+	</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="5" width=100%>
+<tr>
+	<td width=70% valign="top">
+	
+	<p style="margin-left:21px; margin-top: 10px;"><em>Serving the mental health needs of Virginia's families</em></p>	
+	<h1 style="margin-top: 50px; margin-left: 120px; margin-right: 120px"> Contact Us </h1>
 
-				<form id="basicForm" style="padding-top:40px">
+	<form id="basicForm" style="padding: 40px 0; margin: 0 120px;">
 					<div class="form-group">
-						<label>Client's Name </label>
-						<input class="form-control" type="client" name="clientName" />
+						<label>Patient's Name </label>
+						<input class="form-control" type="client" name="patientName" />
 					</div>
 					<div class="form-group">
 						<label>Your Name </label>
 						<input class="form-control" type="parent" name="parentName" />
 					</div>
 					<div class="form-group">
-						<label>Relationship to Client </label>
+						<label>Relationship to Patient </label>
 						<input class="form-control" type="relationship" name="relationship" />
+					</div>
+					<div class="form-group">
+						<label>Patient's Insurance </label>
+						<input class="form-control" type="insurance" name="patientInsurance" />
 					</div>
 					<div class="form-group">
 						<label>Day Contact Phone Number </label>
@@ -58,18 +82,21 @@
 						<input class="form-control" type="description" name="description" />
 					</div>
 					<div class="form-group">
-						<input class="btn btn-danger" type="submit" value="Send" name="submit" />
+						<input class="btn btn-primary" style=" padding: 10px 18px; font-size: 15px;" type="submit" value="Send" name="submit" />
 					</div>
 				</form>
-			</div>
-		</div>
-	</div>
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	
+	</td>
+	<td width=30% bgcolor="#BFAB94" valign="top" align="center"><img src="css/images/monkeybars_brown.jpg"><br><br></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+ <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-
 	<script>
 	$("#basicForm").submit(function(e) {
 
@@ -79,13 +106,12 @@
            data: $("#basicForm").serialize(),     // serialize your form's elements.
            success: function(data)
            {
-          		$("#basicForm").html("<div class='well'><h4 class='text-primary'>Your information has successfully been received. Thank you.</h4></div>");
+          		$("#basicForm").html("<div class='well well-sm'><h4 class='text-primary'>Your information has successfully been received. Thank you.</h4></div>");
            }
          });
 
     e.preventDefault();    // avoid to execute the actual submit of the form.
 	});
 	</script>
-
-  </body>
+</body>
 </html>
