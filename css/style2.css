@@ -74,7 +74,6 @@ label {
 .invisibull {
 	display: none;
 	visibility: hidden;
-	background-color: black;
 }
 
 .errorInput {
