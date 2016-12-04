@@ -1,7 +1,5 @@
-
-
 $("#contactForm").submit(function(e) {
-$('input,textarea').attr('autocomplete', 'off');
+
   	 var arrayLength = document.getElementsByClassName("formField").length;
     var error = 0;
     
@@ -14,11 +12,12 @@ $('input,textarea').attr('autocomplete', 'off');
 		inputArray.add("normalInput");
       errorArray.innerHTML = "";
 
-    	if (inputText == null || inputText == "") {
+    	if (inputText == null || inputText == "" || inputText.trim().length == 0) {
         error++;
-        var customMessage = ["Patient name", "Parent name", "Relationship to Patient", "Patient insurance", "Day phone", "Evening phone", "Email", "How you heard about us", "A description"];
+        var customMessage = ["Patient name", "Your name", "Relationship to patient", "Patient insurance", "Day phone", "Evening phone", "Email", "How you heard about us", "A description"];
         errorArray.innerHTML = "*&nbsp;" + customMessage[i] + " is required.";
 
+		  inputText = "";
 		  inputArray.remove("normalInput");
 		  inputArray.add("errorInput");
 		  }
@@ -38,6 +37,7 @@ $('input,textarea').attr('autocomplete', 'off');
            }
          });
 
+   document.getElementById("formButton").disabled = true;
    return false;    // avoids default form submission
 
 });
