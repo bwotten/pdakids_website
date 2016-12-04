@@ -12,11 +12,10 @@ $("#contactForm").submit(function(e) {
 		inputArray.add("normalInput");
       errorArray.innerHTML = "";
 
-    	if (inputText == null || inputText == "") {
+    	if (inputText == null || inputText == "" || inputText.trim().length == 0) {
         error++;
-        var customMessage = ["Patient name", "Parent name", "Relationship to Patient", "Patient insurance", "Day phone", "Evening phone", "Email", "How you heard about us", "A description"];
+        var customMessage = ["Patient name", "Your name", "Relationship to Patient", "Patient insurance", "Day phone", "Evening phone", "Email", "How you heard about us", "A description"];
         errorArray.innerHTML = "*&nbsp;" + customMessage[i] + " is required.";
-
 		  inputArray.remove("normalInput");
 		  inputArray.add("errorInput");
 		  }

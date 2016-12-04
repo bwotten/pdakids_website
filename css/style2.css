@@ -71,6 +71,12 @@ label {
 	border: 1px solid #ccc;
 }
 
+.invisibull {
+	display: none;
+	visibility: hidden;
+	background-color: black;
+}
+
 .errorInput {
 	border: 2px solid hsl(10,100%,50%);
 }
