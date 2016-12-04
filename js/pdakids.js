@@ -14,10 +14,15 @@ $("#contactForm").submit(function(e) {
 
     	if (inputText == null || inputText == "" || inputText.trim().length == 0) {
         error++;
+<<<<<<< HEAD
         var customMessage = ["Patient name", "Your name", "Relationship to patient", "Patient insurance", "Day phone", "Evening phone", "Email", "How you heard about us", "A description"];
         errorArray.innerHTML = "*&nbsp;" + customMessage[i] + " is required.";
 
 		  inputText = "";
+=======
+        var customMessage = ["Patient name", "Your name", "Relationship to Patient", "Patient insurance", "Day phone", "Evening phone", "Email", "How you heard about us", "A description"];
+        errorArray.innerHTML = "*&nbsp;" + customMessage[i] + " is required.";
+>>>>>>> bbf69792c7c87eba7843a11f1bf9e167e461ea2a
 		  inputArray.remove("normalInput");
 		  inputArray.add("errorInput");
 		  }

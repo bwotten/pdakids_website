@@ -1,5 +1,9 @@
 <?php
+	
+	$invis_input=$_POST['invisibull_field']
 
+	//only execute if invisible field isn't filled out
+	if (strlen($invis_input) == 0 ){
 	$patientName=substr($_POST['patientName'],0,75);           //HTML element references
 	$parentName=substr($_POST['parentName'],0,75);
 	$relationship=substr($_POST['relationship'],0,75);
@@ -80,7 +84,7 @@
 
 	$m->send();
 	unlink('/var/www/html/pdakids/patientInfo/NewPatient.pdf');
-
-	http_response_code(204);    //prevents script from opening on the browser
+	}
+	//prevents script from opening on the browser
 
 ?>
