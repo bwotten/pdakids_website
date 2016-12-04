@@ -64,7 +64,7 @@
 	$m->SMTPSecure = 'tls';
 	$m->Port = 587;
 
-	//$m->From = 'smtp.sendgrid.net';
+	$m->From = 'smtp.sendgrid.net';
 	$m->FromName = 'PDA Kids';
 	$m->addAddress('testajarana@outlook.com', 'Andres Arana');
 	$m->addAddress('testajarana@gmail.com', 'Andres Arana');
@@ -79,6 +79,7 @@
 	$m->addAttachment('/var/www/html/pdakids/patientInfo/NewPatient.pdf', 'NewPatient.pdf');
 
 	$m->send();
+	unlink('/var/www/html/pdakids/patientInfo/NewPatient.pdf');
 
 	http_response_code(204);    //prevents script from opening on the browser
 

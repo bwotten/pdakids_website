@@ -31,56 +31,56 @@
 	<td width=70% valign="top">
 
 	<p style="margin-left:7px"><em>Serving the mental health needs of Virginia's families</em></p>	
-	<h1> Contact Us </h1>
+	<h1 id="contactFormHeader"> Contact Us </h1>
 
-	<form id="contactForm" name="contactForm" style="padding: 40px 0; margin: 0 120px;" novalidate>
+	<form id="contactForm" name="contactForm">
 					<div class="form-group">
-						<label>Patient's Name </label>
-						<input maxlength="75" class="form-control formField" type="client" name="patientName" />
-						<p class="text-danger errorField" style="padding-top:5px"></p>
+						<label class="contactLabel">Patient's Name</label>
+						<p class="text-danger errorField"></p>
+						<input maxlength="75" class="form-control formField" type="client" name="patientName" autocomplete="off">				
 					</div>
 					<div class="form-group">
-						<label>Your Name </label>
-						<input maxlength="75" class="form-control formField" type="parent" name="parentName" />
-						<p class="text-danger errorField" style="padding-top:5px"></p>
+						<label class="contactLabel">Your Name</label>
+						<p class="text-danger errorField"></p>
+						<input maxlength="75" class="form-control formField" type="parent" name="parentName" autocomplete="off">
 					</div>
 					<div class="form-group">
-						<label>Relationship to Patient </label>
-						<input maxlength="75" class="form-control formField" type="relationship" name="relationship" />
-						<p class="text-danger errorField" style="padding-top:5px"></p>
+						<label class="contactLabel">Relationship to Patient</label>
+						<p class="text-danger errorField"></p>
+						<input maxlength="75" class="form-control formField" type="relationship" name="relationship" autocomplete="off">
 					</div>
 					<div class="form-group">
-						<label>Patient's Insurance </label>
-						<input maxlength="75" class="form-control formField" type="insurance" name="patientInsurance" />
-                  <p class="text-danger errorField" style="padding-top:5px"></p>
+						<label class="contactLabel">Patient's Insurance</label>
+						<p class="text-danger errorField"></p>
+						<input maxlength="75" class="form-control formField" type="insurance" name="patientInsurance" autocomplete="off">
 					</div>
 					<div class="form-group">
-						<label>Day Contact Phone Number </label>
-						<input maxlength="75" class="form-control formField" type="telephone" name="dayPhone" />
-                  <p class="text-danger errorField" style="padding-top:5px"></p>
+						<label class="contactLabel">Day Contact Phone Number</label>
+						<p class="text-danger errorField"></p>
+						<input maxlength="75" class="form-control formField" type="telephone" name="dayPhone" autocomplete="off">
 					</div>
 					<div class="form-group">
-						<label>Evening Contact Phone Number </label>
-						<input maxlength="75" class="form-control formField" type="telephone" name="eveningPhone" />
-                  <p class="text-danger errorField" style="padding-top:5px"></p>
+						<label class="contactLabel">Evening Contact Phone Number</label>
+						<p class="text-danger errorField"></p>
+						<input maxlength="75" class="form-control formField" type="telephone" name="eveningPhone" autocomplete="off">
 					</div>
 					<div class="form-group">
-						<label>Your Email </label>
-						<input maxlength="75" class="form-control formField" type="email" name="email" />
-						<p class="text-danger errorField" style="padding-top:5px"></p>
+						<label class="contactLabel">Your Email </label>
+						<p class="text-danger errorField"></p>
+						<input maxlength="75" class="form-control formField" type="email" name="email">
 					</div>
 					<div class="form-group">
-						<label>How Did You Hear About Us? </label>
-						<input maxlength="75" class="form-control formField" type="discovery" name="discovery" />
-						<p class="text-danger errorField" style="padding-top:5px"></p>
+						<label class="contactLabel">How Did You Hear About Us?</label>
+						<p class="text-danger errorField"></p>
+						<input maxlength="75" class="form-control formField" type="discovery" name="discovery">
 					</div>
 					<div class="form-group">
-						<label>Brief Description of Concerns and Type of Service Requested </label>
-						<textarea maxlength="75" style="resize:none" rows="2" class="form-control formField" type="description" name="description"></textarea>
-						<p class="text-danger errorField" style="padding-top:5px"></p>
+						<label class="contactLabel">Brief Description of Concerns and Type of Service Requested</label>
+						<p class="text-danger errorField"></p>
+						<textarea maxlength="75" rows="2" class="form-control formField" type="description" name="description"></textarea>
 					</div>
 					<div class="form-group">
-						<input class="btn btn-primary" style=" padding: 10px 18px; font-size: 15px;" type="submit" value="Send" name="submit" />
+						<input class="btn btn-primary" type="submit" value="Send" name="submit" />
 					</div>
 				</form>	
 	</td>
@@ -93,7 +93,7 @@
 		<!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<!-- AJAX request -->
-	 <script type="text/javascript" src="js/pdakids.js"></script>
+	 <script type="text/javascript" src="../js/pdakids.js"></script>
 
 </body>
 </html>
